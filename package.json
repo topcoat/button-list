@@ -1,6 +1,6 @@
 {
   "name": "topcoat-button-list",
-  "version": "0.1.1",
+  "version": "0",
   "description": "Topcoat default button list skin",
   "directories": {
     "test": "test"
@@ -11,7 +11,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git@github.com:topcoat/button-list.git"
+    "url": "https://github.com/fabricematrat/button-list.git"
   },
   "keywords": [
     "css",
