@@ -1,4 +1,4 @@
-Topcoat Button Bar
+Topcoat Button List
 ==============
 
 Default skin for topcoat button list.
