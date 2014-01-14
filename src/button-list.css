@@ -15,8 +15,8 @@
 * limitations under the License.
 *
 */
-@import topcoat-button
-@import button-bar
+@import "topcoat-button-bar-base";
+@import "topcoat-button";
 /* topdoc
   name: Button list
   description: Component of grouped buttons
@@ -45,70 +45,70 @@
     - group
     - list
 */
-.topcoat-button-list {
-  @extend .button-bar
+.button-list {
+  extend: %button-bar;
 }
 
 /* Custom behavior to display in list*/
-.topcoat-button-list__item {
+.button-list__item {
     width: auto;
     border-radius: 0;
 }
 
 /* Custom behavior for top element */
-.topcoat-button-list > .topcoat-button-list__item:first-child {
-    border-top-left-radius: var-border-radius;
-    border-top-right-radius: var-border-radius;
+.button-list > .button-list__item:first-child {
+    border-top-left-radius: var(border-radius);
+    border-top-right-radius: var(border-radius);
 }
 
 /* Custom behavior for bottom element */
-.topcoat-button-list > .topcoat-button-list__item:last-child {
-    border-bottom-left-radius: var-border-radius;
-    border-bottom-right-radius: var-border-radius;
+.button-list > .button-list__item:last-child {
+    border-bottom-left-radius: var(border-radius);
+    border-bottom-right-radius: var(border-radius);
 }
 
-.topcoat-button-list__item > input {
-  @extend .button-bar__item > input
+.button-list__item > input {
+  extend: %button-bar__item__input;
 }
 
-.topcoat-button-list__item:first-child > .topcoat-button-list__button,
-.topcoat-button-list__item:first-child > .topcoat-button-list__button--large {
+.button-list__item:first-child > .button-list__button,
+.button-list__item:first-child > .button-list__button--large {
   border-bottom: none;
 }
 
-.topcoat-button-list__item:last-child > .topcoat-button-list__button,
-.topcoat-button-list__item:last-child > .topcoat-button-list__button--large {
+.button-list__item:last-child > .button-list__button,
+.button-list__item:last-child > .button-list__button--large {
   border-top: none;
 }
 
-.topcoat-button-list__button {
-  @extend .topcoat-button;
+.button-list__button {
+  extend: .button;
   border-radius: inherit;
 }
 
 /* Custom behavior to size to longest text button */
-.topcoat-button-list__button,
-.topcoat-button-list__button--large {
+.button-list__button,
+.button-list__button--large {
     width:100%;
 }
 
-.topcoat-button-list__button:active,
-.topcoat-button-list__button--large:active,
-:checked + .topcoat-button-list__button {
-  @extend .topcoat-button:active
+.button-list__button:active,
+.button-list__button--large:active,
+:checked + .button-list__button {
+  extend: .button:active;
 }
 
-.topcoat-button-list__button:disabled {
-  @extend .topcoat-button:disabled
+.button-list__button:disabled {
+  extend: .button:disabled;
 }
 
-.topcoat-button-list__button:hover {
-  @extend .topcoat-button:hover
+.button-list__button:hover {
+  extend: .button:hover;
 }
 
-.topcoat-button-list__button:focus,
-.topcoat-button-list__button--large:focus {
-  @extend .topcoat-button:focus
+.button-list__button:focus,
+.button-list__button--large:focus {
+  extend: .button:focus;
   z-index: 1;
 }
 /* topdoc
@@ -138,15 +138,15 @@
     - list
     - large
 */
-.topcoat-button-list__button--large {
-  @extend .topcoat-button--large
+.button-list__button--large {
+  extend: .button--large;
   border-radius: inherit;
 }
 
-.topcoat-button-list__button--large:disabled {
-  @extend .topcoat-button:disabled
+.button-list__button--large:disabled {
+  extend: .button:disabled;
 }
 
-.topcoat-button-list__button--large:hover {
-  @extend .topcoat-button:hover
+.button-list__button--large:hover {
+  extend: .button:hover;
 }
